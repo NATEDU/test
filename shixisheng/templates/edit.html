@@ -1,0 +1,8 @@
+<meat charset="utf-8">
+<form action="/edit/{{ss.id}}" method="POST">
+{%csrf_token%}
+<input type="text" name="name" value="{{ss.name}}"/>
+<input type="text" name="address" value="{{ss.address}}"/>
+<button>send</button>	
+{{time}}
+</form>
