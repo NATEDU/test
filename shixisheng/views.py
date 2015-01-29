@@ -5,43 +5,56 @@ import datetime
 from django.template.response import TemplateResponse as TR
 #from django.template import RequestContext
 
-from shixisheng.models import student,Image
-def hello(request,abc):
-    #return HttpResponse('Hello Word'+ abc)
-    a=datetime.datetime.now()
-    d={'ab':abc,'time':str(a)}  
-    all=student.objects.all()
-    all_img=Image.objects.all()
-    d['all_img']=all_img
-    #all=student.objects.filter() 
-    d['all']=all
-      
+from shixisheng.models import Student,Image,Text,Company,Partner,Href,Flow,All_Company,Login
+def hello(request):
+    c=Company.objects.all()[:8] 
+    s=Student.objects.all()[:5]  
+    t=Text.objects.all()[:6]
+    t_all=Text.objects.all()
+    p=Partner.objects.all()[:9]
+    h=Href.objects.all()
+    f=Flow.objects.all()
+    i=Image.objects.all()
+    d={'all_company':c,'student':s,'text':t,'partner':p,'href':h,'flow':f}    
+    for x in t_all:	
+    	d[x.name]=x.info    
+    for x in i:
+    	d[x.name]=x.img
+    	
     return TR(request,'index.html',d)
     #return render_to_response("wow.html",d,context_instance=RequestContext(request))
 
+def login(request):
+	return TR(request,'login.html')
+
+def all_company(request):
+	ac=All_Company.objects.all()
+	t=Text.objects.all()
+	d={'ac':ac}
+	for x in t:
+		d[x.name]=x.info
+	return TR(request,'ac.html',d)
+
 def new(request):
-	print request.POST
-	s= student()
-	s.name=request.POST['name']
-	s.address=request.POST['address']
-	s.content=request.POST['content']
-	s.count=0
-	s.save()
-	return redirect("/hello/sdfgh")
+	l=Login()
+	l.email=request.POST['email']
+	l.password=request.POST['password']
+	l.save()
+	return redirect("/hello")
 
 def delete(request,id):
-	s=student.objects.get(id=int(id))
+	s=Student.objects.get(id=int(id))
 	s.delete()
 	return redirect("/hello/sdfgh")
 
 def edit_view(request,id):
-	s=student.objects.get(id=int(id))
+	s=Student.objects.get(id=int(id))
 	t=datetime.datetime.now()
 	d={"ss":s,'time':str(t)}
 	return TR(request,"edit.html",d)
 
 def edit(request,id):
-	s=student.objects.get(id=int(id))
+	s=Student.objects.get(id=int(id))
 	s.name=request.POST['name']
 	s.address=request.POST['address']
 	s.save()
