@@ -5,76 +5,28 @@
 <!-- Bootstrap Themes -->
 <link href="static/css/lightGreen-blueGrey-b.css" rel="stylesheet" id="bootstrapTheme">
 <link href="static/css/lightGreen-blueGrey-m.css" rel="stylesheet" id="mainTheme">
- <link href="http://responsivewebinc.com/premium/renata2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://responsivewebinc.com/premium/renata2/css/animate.min.css" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="static/css/sty.css" rel="stylesheet">
-
-
+ 
 </head>
 
 <body style="background-color:#FFF8DC;">
-  <!-- Head Start -->
-    <div class="nav-head">
-      <!-- Navigation Bar -->
-      <nav class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">
-              <!-- Logo and Head Text -->
-              <div class="logo">
-                <!-- Logo Icon and Heading -->
-                <img src="http://responsivewebinc.com/premium/renata2/img/logo.png" class="img-responsive" alt="" /><span>Renata</span>
-              </div>
-            </a>
-          </div>
-
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="127.0.0.1:8000">主页</a></li>
-              <li><a onclick="loadXMLDoc()">合作企业</a></li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Pages <span class="fa fa-angle-down"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="error.html">404 Error</a></li>
-                  <li><a href="careers.html">Careers</a></li>
-                  <li><a href="comingsoon.html">Coming Soon</a></li>
-                  <li><a href="faq.html">Faq</a></li>
-                  <li><a href="features.html">Features</a></li>
-                  <li><a href="gallery.html">Gallery</a></li>
-                  <li><a href="login.html">Login/Register</a></li>
-                  <li><a href="portfolio.html">Portfolio</a></li>
-                  <li><a href="pricing.html">Pricing</a></li>
-                  <li><a href="products.html">Products</a></li>
-                  <li><a href="service.html">Service</a></li>
-                  <li><a href="support.html">Support</a></li>
-                  <li><a href="testimonials.html">Testimonials</a></li>
-                </ul></li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Blog <span class="fa fa-angle-down"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="blog.html">Blog</a></li>
-                  <li><a href="blog-single.html">Blog Single</a></li>
-                </ul></li>
-              <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div>
-      </nav>
+ <nav class="navbar navbar-inverse navbar-no-bg" role="navigation"  >
+  <div class="container" >
+    <div class="navbar-header" >
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1" > <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand"  style="text-decoration:none; font-size:50px; color:#3399FF; " href="#">{{站名}}</a> </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="top-navbar-1">
+      <ul class="nav navbar-nav navbar-right">
+        {%for x in href%}
+        <li><a class="scroll-link" style="text-decoration:none; font-size:20px;"  href="/hello/{{x.link}}">{{x.name}}</a></li>
+        {%endfor%}
+      </ul>
     </div>
-    <!-- head End -->
-
+  </div>
+</nav> 
 
 <!-- company -->
-<h2 class="lg-title" style="color:black;font-weight:bold; padding-top:130px; font-family:'幼圆';">合作企业</h2>
+<h2 class="lg-title" style="color:black;font-weight:bold; padding-top:60px; font-family:'幼圆';">合作企业</h2>
 <p class="subtitle-v2 ">我们为您提供最优秀的合作企业</p>
 <div class="container">
   <div class="panel-group" id="accordion">

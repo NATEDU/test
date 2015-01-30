@@ -29,8 +29,9 @@ def login(request):
 
 def all_company(request):
 	ac=All_Company.objects.all()
+	h=Href.objects.all()
 	t=Text.objects.all()
-	d={'ac':ac}
+	d={'ac':ac,'href':h}
 	for x in t:
 		d[x.name]=x.info
 	return TR(request,'ac.html',d)
