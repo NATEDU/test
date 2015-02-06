@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/css/head/style.css">
+<link rel="stylesheet" href="/static/css/head/bootstrap.min.css">
+<link href="http://the8guild.com/themes/html/kedavra/masterslider/style/masterslider.css" rel="stylesheet" media="screen">
+<link href="http://the8guild.com/themes/html/kedavra/css/styles.css" rel="stylesheet" media="screen">
+<!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5DLwPPVAz88_k0yO2nmFe7T9k1urQs84"></script>-->
+<script src="http://the8guild.com/themes/html/kedavra/js/libs/modernizr.custom.js"></script>
+<script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-46803427-2']);
+              _gaq.push(['_trackPageview']);
+      (function () {
+          var ga = document.createElement('script');
+          ga.type = 'text/javascript';
+          ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+</head>
+<body>
+<div class="page-heading center" id="company">
+    <h1 class="animation" data-animation="fadeInDown">dd</h1>
+  </div>
+  <div class="ms-partialview-template fullwidth space-top" id="fs-partial-view-info">
+    <div class="master-slider ms-skin-default" id="fs-partial-view"> {%for x in all_company%}
+      <div class="ms-slide"> <img src="http://the8guild.com/themes/html/kedavra/masterslider/blank.gif" data-src="/media/{{x.img}}" alt="Corporate Blog"/>
+        <div class="ms-info">
+          <h3>{{x.name}}</h3>
+          <p>{{x.info}}</p>
+          <div class="space-top"><a class="btn btn-md btn-primary btn-center" href="/all_company">ff</a></div>
+        </div>
+      </div>
+      {%endfor%} </div>
+  </div>
+
+
+
+<script src="http://the8guild.com/themes/html/kedavra/js/libs/jquery-1.11.1.min.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/libs/jquery.easing.min.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/bootstrap.min.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/smoothscroll.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/utilities.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/foundation.min.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/jquery.placeholder.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/icheck.min.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/jquery.validate.min.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/waypoints.min.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/isotope.min.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/masterslider.min.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/owl.carousel.min.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/lightGallery.min.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/jquery.stellar.min.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/jquery.parallax.min.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/scripts.js"></script>
+</body>
+</html>

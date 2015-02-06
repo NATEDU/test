@@ -34,7 +34,7 @@ def all_company(request):
 	d={'ac':ac,'href':h}
 	for x in t:
 		d[x.name]=x.info
-	return TR(request,'ac.html',d)
+	return TR(request,'bc.html',d)
 
 def new(request):
 	l=Login()
